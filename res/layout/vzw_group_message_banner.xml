@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:gravity="center" android:layout_gravity="left" android:id="@id/reply_all_group_button" android:background="@drawable/selector_group_textview_background" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/reply_all_label_group" android:layout_weight="0.4" />
+    <TextView android:textSize="14.0dip" android:gravity="center" android:layout_gravity="left" android:id="@id/reply_all_individual_button" android:background="@drawable/selector_group_textview_background" android:focusable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/reply_all_label_individual" android:layout_weight="0.4" />
+    <ImageButton android:layout_gravity="center_vertical" android:id="@id/reply_all_info_button" android:background="@drawable/selector_group_textview_background" android:paddingLeft="10.0dip" android:paddingRight="9.0dip" android:focusable="true" android:layout_width="0.0dip" android:layout_height="24.0dip" android:layout_marginTop="1.0dip" android:src="@drawable/msg_group_info" android:layout_weight="0.2" />
+</LinearLayout>

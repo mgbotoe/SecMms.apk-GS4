@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mms.ui.SearchListItem android:orientation="vertical" android:id="@id/search_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/separator_text" android:focusable="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/listSeparatorTextViewStyle" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_thread_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <android.widget.QuickContactBadge android:layout_gravity="center" android:id="@id/search_avatar" android:layout_width="@dimen/conversation_item_contact_badge_width" android:layout_height="@dimen/conversation_item_contact_badge_height" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" style="@*android:style/Widget.QuickContactBadge.WindowSmall" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="@dimen/conversationList_item_root_height" android:layout_marginLeft="2.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="6.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/conversation_item_from_normal" android:textColor="@color/conversation_item_from_color" android:ellipsize="marquee" android:id="@id/from" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="3120" android:layout_alignWithParentIfMissing="true" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <view android:textSize="@dimen/conversation_item_subject" android:textColor="@color/conversation_item_subject_color" android:ellipsize="end" android:id="@id/subject" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" class="com.android.mms.ui.SearchActivity$TextViewSnippet" />
+                <TextView android:textSize="@dimen/conversation_item_date" android:textColor="@color/conversation_item_date_color" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/bubble_root_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <LinearLayout android:id="@id/bubble_list_item_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ViewStub android:id="@id/left_date_and_icons_stub" android:layout="@layout/message_date_and_icons" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="3.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/search_bubble_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0sp" android:textStyle="bold" android:id="@id/bubble_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="9.0dip" android:layout_marginRight="10.0dip" android:maxWidth="255.0dip" android:singleLine="true" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="19.0sp" android:id="@id/bubble_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="9.0dip" android:maxWidth="255.0dip" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="15.0dip" android:textColor="@color/search_slide_number_color" android:gravity="right" android:id="@id/slide_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:maxWidth="255.0dip" />
+            </LinearLayout>
+            <ViewStub android:id="@id/right_date_and_icons_stub" android:layout="@layout/message_date_and_icons" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/list_divider" android:background="@drawable/tw_list_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.android.mms.ui.SearchListItem>

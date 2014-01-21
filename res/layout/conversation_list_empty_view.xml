@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/empty_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/conversation_empty_view_textsize" android:textColor="@color/conversation_no_message_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_count_zero" android:drawableTop="@drawable/no_text_messages" android:layout_centerInParent="true" style="@style/TwMainListNoMessagesTextAppearance" />
+    <TextView android:textSize="@dimen/conversation_empty_view_popup_textsize" android:textColor="@color/conversation_no_text_template_color" android:id="@id/empty_view_popup" android:background="@drawable/tw_no_item_popup_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginRight="6.0dip" android:maxWidth="@dimen/conversation_empty_view_popup_maxwidth" android:text="@string/empty_template_string" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/empty_template_string_guide" />
+</RelativeLayout>

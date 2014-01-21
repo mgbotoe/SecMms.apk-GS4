@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/widget_innerline" android:padding="1.0px" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ImageView android:background="@color/widget_title_top_line_color" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/widget_header" android:background="@color/widget_title_bg_color" android:paddingLeft="@dimen/widget_title_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/widget_title_height">
+            <ImageButton android:id="@id/widget_settings" android:background="@drawable/selector_widget_new_button_bg" android:paddingLeft="@dimen/widget_title_settings_margin_left" android:paddingRight="@dimen/widget_title_settings_margin_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/widget_message_ic_setting" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/menu_preferences" />
+            <ImageView android:id="@id/vertical_divider" android:background="@color/widget_title_vertical_divider_color" android:layout_width="1.0dip" android:layout_height="@dimen/widget_title_vertical_divider_height" android:layout_toLeftOf="@id/widget_settings" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/widget_compose" android:background="@drawable/selector_widget_new_button_bg" android:paddingLeft="@dimen/widget_title_icon2_margin_left" android:paddingRight="@dimen/widget_title_icon2_margin_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/widget_message_ic_new" android:layout_toLeftOf="@id/vertical_divider" android:layout_centerVertical="true" android:contentDescription="@string/menu_compose_new" />
+            <ImageView android:id="@id/vertical_divider2" android:background="@color/widget_title_vertical_divider_color" android:layout_width="1.0dip" android:layout_height="@dimen/widget_title_vertical_divider_height" android:layout_toLeftOf="@id/widget_compose" android:layout_centerVertical="true" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/vertical_divider2" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/widget_title_color" android:gravity="center_vertical" android:id="@id/widget_label" android:background="@drawable/selector_widget_label" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9.0dip" android:minWidth="@dimen/widget_title_min_width" android:text="@string/all_messages" android:singleLine="true" android:freezesText="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:background="@drawable/widget_message_top_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:background="@color/widget_list_bg_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ListView android:id="@id/conversation_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:listSelector="@drawable/selector_widget_item_bg" android:divider="@color/widget_list_divider_color" android:dividerHeight="1.0dip" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/empty_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/widget_no_message_text_size" android:textColor="@color/widget_no_message_text_color" android:gravity="center" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_count_zero" android:drawableTop="@drawable/message_ic_no_msg" android:drawablePadding="2.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/widget_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/widget_shadow_height" />
+</LinearLayout>

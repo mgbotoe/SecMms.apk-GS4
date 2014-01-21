@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
+    <PreferenceCategory android:title="@string/pref_sms_general_settings_title" android:key="pref_key_storage_settings">
+        <Preference android:persistent="false" android:layout="?android:preferenceLayoutChild" android:title="@string/pref_title_sms_restore" android:key="pref_key_sms_restore" android:summary="@string/pref_summary_sms_restore" />
+        <CheckBoxPreference android:title="@string/pref_title_auto_delete" android:key="pref_key_auto_delete" android:summary="@string/pref_summary_auto_delete" android:widgetLayout="@touchwiz:layout/preference_widget_twcheckbox" android:defaultValue="true" />
+        <Preference android:persistent="false" android:title="@string/pref_title_sms_delete" android:key="pref_key_sms_delete_limit" android:summary="@string/pref_summary_delete_limit" android:widgetLayout="@layout/round_more_icon" android:dependency="pref_key_auto_delete" />
+        <Preference android:persistent="false" android:title="@string/pref_title_mms_delete" android:key="pref_key_mms_delete_limit" android:summary="@string/pref_summary_delete_limit" android:widgetLayout="@layout/round_more_icon" android:dependency="pref_key_auto_delete" />
+        <CheckBoxPreference android:title="@string/pref_truncate_long_messages_title" android:key="pref_key_truncate_long_messages" android:summary="@string/pref_truncate_long_messages_summary" android:defaultValue="false" />
+        <PreferenceScreen android:title="@string/set_text_templates" android:key="pref_key_text_templates">
+            <intent android:targetPackage="com.android.mms" android:action="android.intent.action.MAIN" android:targetClass="com.android.mms.template.TextTemplateListActivity">
+                <extra android:name="callFromSettings" android:value="true" />
+            </intent>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/display_settings_title" android:key="pref_key_display_settings">
+        <com.android.mms.ui.FontSizePreference android:entries="@array/pref_entries_font_size" android:title="@string/pref_title_font_size" android:key="pref_key_font_size" android:defaultValue="Follow system font size" android:dialogTitle="@string/pref_title_font_size" android:entryValues="@array/pref_entry_values_font_size" />
+        <PreferenceScreen android:title="@string/pref_title_bubble_style" android:key="pref_key_bubble_style" android:summary="@string/set_skin">
+            <intent android:targetPackage="com.android.mms" android:action="android.intent.action.MAIN" android:targetClass="com.android.mms.ui.BubbleTypePicker" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/pref_title_background_style" android:key="pref_key_background_color" android:summary="@string/set_skin">
+            <intent android:targetPackage="com.android.mms" android:action="android.intent.action.MAIN" android:targetClass="com.android.mms.ui.BackgroundColorPicker" />
+        </PreferenceScreen>
+        <CheckBoxPreference android:title="@string/pref_title_split_view" android:key="pref_key_split_view" android:summary="@string/pref_summary_split_view" android:widgetLayout="@touchwiz:layout/preference_widget_twcheckbox" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_title_font_size_by_volume_key_enable" android:key="pref_key_font_size_by_volume_key_enable" android:summary="@string/pref_summary_font_size_by_volume_key_enable" android:widgetLayout="@touchwiz:layout/preference_widget_twcheckbox" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_signature_settings_title" android:key="pref_signature_settings">
+        <CheckBoxPreference android:title="@string/pref_title_signature_enabled" android:key="pref_key_enable_signature" android:summary="@string/pref_summary_add_signature" android:widgetLayout="@touchwiz:layout/preference_widget_twcheckbox" android:defaultValue="false" />
+        <com.android.mms.ui.SignaturePreference android:title="@string/pref_title_signature_text" android:key="pref_key_signature_text" android:widgetLayout="@layout/round_more_icon" android:dependency="pref_key_enable_signature" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/unknown_url_link_setting_title" android:key="pref_key_urllink_settings">
+        <CheckBoxPreference android:title="@string/unknown_url_link_setting_subject" android:key="pref_key_urllink_option_enable" android:summary="@string/unknown_url_link_setting_body" android:widgetLayout="@touchwiz:layout/preference_widget_twcheckbox" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
